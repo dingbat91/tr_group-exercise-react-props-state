@@ -30,6 +30,8 @@ function App() {
 		},
 	]);
 
+	const filteredjokes: Array<Joke> = jokes.filter((joke) => joke.id === 3);
+
 	return (
 		<div className='App'>
 			<h1>React props and state</h1>
@@ -40,6 +42,12 @@ function App() {
 
 			<h2>Jokes:</h2>
 			{jokes.map((joke) => (
+				<ul key={joke.id}>
+					<ChuckJoke joke={joke.joke} />
+				</ul>
+			))}
+			<h2>Filtered Jokes:</h2>
+			{filteredjokes.map((joke) => (
 				<ul key={joke.id}>
 					<ChuckJoke joke={joke.joke} />
 				</ul>
