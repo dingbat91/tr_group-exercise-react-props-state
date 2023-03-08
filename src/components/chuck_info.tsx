@@ -1,8 +1,12 @@
 interface ChuckInfoInterface {
 	chuckWhales: number;
+	chuckKicks: number;
 }
 
-const ChuckInfo: React.FC<ChuckInfoInterface> = ({ chuckWhales }) => {
+const ChuckInfo: React.FC<ChuckInfoInterface> = ({
+	chuckWhales,
+	chuckKicks,
+}) => {
 	// 💡 Note that this component, like the <ChuckCard />, uses an "explicit return"
 	// Compare this to <ChuckJoke/> which just returns the JSX directly like this:
 	// const ChuckJoke = () => <>... some JSX Here...</>;
@@ -22,7 +26,7 @@ const ChuckInfo: React.FC<ChuckInfoInterface> = ({ chuckWhales }) => {
 		<>
 			<p>Number of Whales Saved: {chuckWhales} </p>
 
-			<p>Number of Round House Kicks (in the last day): </p>
+			<p>Number of Round House Kicks (in the last day): {chuckKicks} </p>
 		</>
 	);
 };

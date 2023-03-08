@@ -36,7 +36,7 @@ function App() {
 			<ChuckCard chuckGreeting={chuckGreeting} />
 
 			<h2>Chuck Info: </h2>
-			<ChuckInfo chuckWhales={whalesSaved} />
+			<ChuckInfo chuckWhales={whalesSaved} chuckKicks={roundHouseKicks} />
 
 			<h2>Jokes:</h2>
 			{jokes.map((joke) => (
